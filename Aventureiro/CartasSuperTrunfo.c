@@ -2,8 +2,8 @@
 
 int main(){
 
-    char uf, cidade[3];
-    char uf2, cidade2[3];
+    char uf, codcidade[3], cidade[20];
+    char uf2, codcidade2[3], cidade2[20];
     int opcao;
     int populacao, pontos;
     int populacao2, pontos2;
@@ -13,41 +13,43 @@ int main(){
     float densidadepop2, pibpcapita2;
 
     //Aqui acontece a insercao de dados da carta 1
-    printf("*** ESTADO A ***\n");
-    printf("Informe a cidade (Letra do estado + de 1 a 4):\n");
+    printf("*** CARTA 1 ***\n");
+    printf("Informe o estado (de A a H): \n");
+    scanf("%s", &uf);
+    printf("Informe codigo da cidade (Letra do estado + de 1 a 4): \n");
+    scanf("%s", &codcidade);
+    printf("Informe a cidade: \n");
     scanf("%s", &cidade);
-
-    printf("Informe a populacao:\n");
+    printf("Informe a populacao:n");
     scanf("%d",&populacao);
-
-    printf("informe a area total da cidade (Km²):\n");
+    printf("informe a area total da cidade (Km²): \n");
     scanf("%f", &area);
-
-    printf("Informe o PIB:\n");
+    printf("Informe o PIB: \n");
     scanf("%f", &pib);
-
-    printf("Informe quantos pontos turistico a cidade possui:\n");
+    printf("Informe quantos pontos turistico a cidade possui: \n");
     scanf("%d", &pontos);
 
+    //Aqui acontece a insercao de dados da carta 2
+    printf("*** CARTA 2 ***\n");
+    printf("Informe o estado (de A a H): \n");
+    scanf("%s", &uf2);
+    printf("Informe codigo da cidade (Letra do estado + de 1 a 4): \n");
+    scanf("%s", &codcidade2);
+    printf("Informe a cidade: \n");
+    scanf("%s", &cidade2);
+    printf("Informe a populacao:n");
+    scanf("%d",&populacao2);
+    printf("informe a area total da cidade (Km²): \n");
+    scanf("%f", &area2);
+    printf("Informe o PIB: \n");
+    scanf("%f", &pib2);
+    printf("Informe quantos pontos turistico a cidade possui: \n");
+    scanf("%d", &pontos2);
+
+    //Aqui é realizado os Calculos de Densidade demografica e PIB percapta;
+    
     densidadepop = populacao / area;
     pibpcapita = pib / populacao;
-
-    //Aqui acontece a insercao de dados da carta 2
-    printf("*** ESTADO B ***\n");
-    printf("Informe a cidade (Letra do estado + de 1 a 4):\n");
-    scanf("%s", &cidade2);
-    
-    printf("Informe a populacao:\n");
-    scanf("%d",&populacao2);
-
-    printf("informe a area total da cidade (Km²):\n");
-    scanf("%f", &area2);
-
-    printf("Informe o PIB:\n");
-    scanf("%f", &pib2);
-
-    printf("Informe quantos pontos turistico a cidade possui:\n");
-    scanf("%d", &pontos2);
 
     densidadepop2 = populacao2 / area2;
     pibpcapita2 = pib2 / populacao2;
