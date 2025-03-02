@@ -54,155 +54,27 @@ int main(){
     densidadepop2 = populacao2 / area2;
     pibpcapita2 = pib2 / populacao2;
 
-    //Escolhendo a informacao a ser avaliada
-    printf("Escolha uma das opcoes abaixo para comparar:\n");
-    printf("1. A populacao de cada cidade:\n");
-    printf("2. A area de cada cidade:\n");
-    printf("3. O PIB de cada cidade:\n");
-    printf("4. O Numero de pontos turisticos:\n");
-    printf("5. A Densidade demografica:\n");
-    printf("A opcao escolhida foi: \n");
-    scanf("%d", &opcao);
+    printf("»»» carta 1 «««\n");
+    printf("Estado: %c\n", uf);
+    printf("Codigo da cidade: %s\n", codcidade);
+    printf("Cidade: %s\n", cidade);
+    printf("Populacao: %d\n", populacao);
+    printf("Area: %.2f\n", area);
+    printf("PIB: %.2f\n", pib);
+    printf("Pontos Turisticos: %d\n", pontos);
+    printf("Densidade demografica: %.2f\n", densidadepop);
+    printf("PIB Percapita: %.2f\n", pibpercapita);
     
-    //Avaliando a opcao escolhida
-    switch (opcao)
-    {
-    case 1:
-        printf("O atributo escolhido foi populacao.\n");        
-        break;
-    case 2:
-        printf("O atributo escolhido foi area.\n");
-        break;
-    case 3:
-        printf("O atributo escolhido foi PIB.\n");
-        break;
-    case 4:
-        printf("O atributo escolhido foi pontos turisticos.\n");
-        break;
-    case 5:
-        printf("O atributo escolhido foi densidade demografica.\n");
-        break;    
-    default:
-        printf("Sua opcao e invalida!");
-        break;
-    }
-
-    /*Aqui será realizado as comparações e apresentado o resultado
-      conforme critério definido pelo jogador. 
-    */
-   //Se a opção escolhida foi a população
-    if(opcao == 1){   
-        if(populacao > populacao2){
-            printf("»»» PAIS A «««\n");
-            printf("Populacao da cidade %s: %d\n", cidade, populacao);
-            printf("»»» PAIS B «««\n");
-            printf("Populacao da cidade %s: %d\n", cidade2, populacao2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade);
-        } else if (populacao == populacao2)
-        {
-            printf("»»» PAIS A «««\n");
-            printf("Populacao da cidade %s: %d\n", cidade, populacao);
-            printf("»»» PAIS B «««\n");
-            printf("Populacao da cidade %s: %d\n", cidade2, populacao2);
-            printf("»»» HOUVE EMPATE «««");
-        } else {
-            printf("»»» PAIS A «««\n");
-            printf("Populacao da cidade %s: %d\n", cidade, populacao);
-            printf("»»» PAIS B «««\n");
-            printf("Populacao da cidade %s: %d\n", cidade2, populacao2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade2);
-    }}
-
-    //Se a opção escolhida foi a área (Km²)
-    if(opcao == 2){   
-        if(area > area2){
-            printf("»»» PAIS A «««\n");
-            printf("Area da cidade %s: % 2.f\n", cidade, area);
-            printf("»»» PAIS B «««\n");
-            printf("Area da cidade %s: % 2.f\n", cidade2, area2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade);
-        } else if (area == area2)
-        {
-            printf("»»» PAIS A «««\n");
-            printf("Area da cidade %s: %2.f km²\n", cidade, area);
-            printf("»»» PAIS B «««\n");
-            printf("Area da cidade %s: %2.f km²\n", cidade2, area2);
-            printf("»»» HOUVE EMPATE «««");
-        } else {
-            printf("»»» PAIS A «««\n");
-            printf("Area da cidade %s: %2.f km²\n", cidade, area);
-            printf("»»» PAIS B «««\n");
-            printf("Area da cidade %s: %2.f km2\n", cidade2, area2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade2);
-    }}
-
-    //Se a opção escolhida foi o PIB
-    if(opcao == 3){   
-        if(pib > pib2){
-            printf("»»» PAIS A «««\n");
-            printf("O PIB da cidade %s: % 2.f\n", cidade, pib);
-            printf("»»» PAIS B «««\n");
-            printf("O PIB da cidade %s: % 2.f\n", cidade2, pib2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade);
-        } else if (pib == pib2)
-        {
-            printf("»»» PAIS A «««\n");
-            printf("O PIB da cidade %s: % 2.f\n", cidade, pib);
-            printf("»»» PAIS B «««\n");
-            printf("O PIB da cidade %s: % 2.f\n", cidade2, pib2);
-            printf("»»» HOUVE EMPATE «««");
-        } else {
-            printf("»»» PAIS A «««\n");
-            printf("O PIB da cidade %s: % 2.f\n", cidade, pib);
-            printf("»»» PAIS B «««\n");
-            printf("O PIB da cidade %s: % 2.f\n", cidade2, pib2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade2);
-    }}
-    
-        //Se a opção escolhida foi Número de pontos turísticos
-    if(opcao == 4){   
-        if(pontos > pontos2){
-            printf("»»» PAIS A «««\n");
-            printf("Pontos turisticos da cidade %s: %d\n", cidade, pontos);
-            printf("»»» PAIS B «««\n");
-            printf("Pontos turisticos da cidade %s: %d\n", cidade, pontos2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade);
-        } else if (pontos == pontos2)
-        {
-            printf("»»» PAIS A «««\n");
-            printf("Pontos turisticos da cidade %s: %d\n", cidade, pontos);
-            printf("»»» PAIS B «««\n");
-            printf("Pontos turisticos da cidade %s: %d\n", cidade, pontos2);
-            printf("»»» HOUVE EMPATE «««");
-        } else {
-            printf("»»» PAIS A «««\n");
-            printf("Pontos turisticos da cidade %s: %d\n", cidade, pontos);
-            printf("»»» PAIS B «««\n");
-            printf("Pontos turisticos da cidade %s: %d\n", cidade, pontos2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade2);
-    }}
-    
-    //Se a opção escolhida foi a densidade demográfica
-    if(opcao == 5){   
-        if(densidadepop < densidadepop2){
-            printf("»»» PAIS A «««\n");
-            printf("A densidade demografica da cidade %s: %f\n", cidade, densidadepop);
-            printf("»»» PAIS B «««\n");
-            printf("A densidade demografica da cidade %s: %f\n", cidade, densidadepop2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade);
-        } else if (densidadepop == densidadepop2)
-        {
-            printf("»»» PAIS A «««\n");
-            printf("A densidade demografica da cidade %s: %f\n", cidade, densidadepop);
-            printf("»»» PAIS B «««\n");
-            printf("A densidade demografica da cidade %s: %f\n", cidade, densidadepop2);
-            printf("»»» HOUVE EMPATE «««");
-        } else {
-            printf("»»» PAIS A «««\n");
-            printf("A densidade demografica da cidade %s: %f\n", cidade, densidadepop);
-            printf("»»» PAIS B «««\n");
-            printf("A densidade demografica da cidade %s: %f\n", cidade, densidadepop2);
-            printf("»»» A CARTA VENCEDORA: %s  «««\n", cidade2);
-    }}
+    printf("»»» carta 1 «««\n");
+    printf("Estado: %c\n", uf2);
+    printf("Codigo da cidade: %s\n", codcidade2);
+    printf("Cidade: %s\n", cidade2);
+    printf("Populacao: %d\n", populacao2);
+    printf("Area: %.2f\n", area2);
+    printf("PIB: %.2f\n", pib2);
+    printf("Pontos Turisticos: %d\n", pontos2);
+    printf("Densidade demografica: %.2f\n", densidadepop2);
+    printf("PIB Percapita: %.2f\n", pibpercapita2);
+  
     return 0;   
 }
