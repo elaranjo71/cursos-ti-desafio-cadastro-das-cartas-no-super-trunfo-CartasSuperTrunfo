@@ -2,8 +2,8 @@
 
 int main(){
 
-    char uf1[3], uf2[3];
-    char codcidade1[3], codcidade2[3];
+    char uf1, uf2;
+    char codcidade1[4], codcidade2[4];
     char cidade1[20], cidade2[20];
     int opcao, resultado;
     unsigned long int populacao1, populacao2;
